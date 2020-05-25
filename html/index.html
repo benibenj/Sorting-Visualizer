@@ -1,0 +1,32 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/index.js"></script>
+    <script src="js/mergesort.js"></script>
+    <script src="js/quicksort.js"></script>
+    <script src="js/bubblesort.js"></script>
+    <script src="js/selectionsort.js"></script>
+    <script src="js/insertionsort.js"></script>
+    <script src="js/animate.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/index.css">
+    <title>Sorting Visualizer</title>
+</head>
+<body>
+    <nav>
+        <h2>Array Size</h2>
+        <input type="range" id="bar_count" min="10" max="200" oninput="create_bars(this.value)" onchange="create_bars(this.value)">
+        <h2>Speed</h2>
+        <input type="range" id="speed_count" min="0" max="4" oninput="change_speed(this.value)" onchange="change_speed(this.value)">
+        <button id="new_array" onclick="create_bars(-1)">New Array</button>
+        <button id="stop" onclick="location.href = '/';" style="display: none;">Stop</button>
+        <button id="bubblesort" onclick="bubblesort_helper();">Bubble Sort</button>
+        <button id="selectionsort" onclick="selectionsort_helper();">Selection Sort</button>
+        <button id="insertionsort" onclick="insertionsort_helper();">Insertion Sort</button>
+        <button id="mergesort" onclick="mergesort_helper();">Merge Sort</button>
+        <button id="quicksort" onclick="quicksort_helper();">Quick Sort</button>
+    </nav>
+    <main id="bars-container">
+    </main>
+</body>
+</html>
