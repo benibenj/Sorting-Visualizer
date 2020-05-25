@@ -150,7 +150,25 @@ input[type=range]:focus::-ms-fill-upper {
     background: #367ebd;
 }
 
+@media (max-width: 1400px) { 
+    nav{
+        justify-content: left;
+    }
+
+    button{
+        float: left;
+    }
+}
+
 @media (max-width: 1000px) { 
+    nav{
+        justify-content: space-evenly;
+    }
+
+    button{
+        width: 40%;
+    }
+
     input[type=range] {
         width: 30%;
     }
