@@ -1,6 +1,7 @@
 body{
     margin: 0;
     padding: 0;
+    background: #efefef;
 }
 
 nav{
@@ -30,7 +31,7 @@ main{
     width: 100%;
     margin: 80px 0%;
     text-align: center;
-    height: 600px;
+    height: 500px;
 }
 
 .bar{
@@ -153,10 +154,6 @@ input[type=range]:focus::-ms-fill-upper {
 @media (max-width: 1400px) { 
     nav{
         justify-content: left;
-    }
-
-    button{
-        float: left;
     }
 }
 

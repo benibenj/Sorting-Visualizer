@@ -10,6 +10,10 @@ window.onload = function() {
     create_bars(bars_amount);
 };
 
+window.onresize = function(){
+    create_bars(bars_amount)
+};
+
 function create_bars(size){
     finished_sorting = false
     bars_amount = (size === -1) ? bars_amount:size;
