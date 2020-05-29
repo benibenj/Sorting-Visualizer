@@ -5,13 +5,16 @@ var timeout_time = 2;
 var finished_sorting;
 let dispatcher = [];
 let heights = [];
+let buttons_disabled = false;
 
 window.onload = function() {
     create_bars(bars_amount);
 };
 
 window.onresize = function(){
-    create_bars(bars_amount)
+    if(!buttons_disabled){
+        create_bars(bars_amount);
+    }
 };
 
 function create_bars(size){
@@ -69,6 +72,7 @@ function shuffleArray(array) {
 }
 
 function disable_buttons(){
+    buttons_disabled = true;
     document.querySelectorAll("button").forEach(b => b.disabled = true);
     document.getElementById('new_array').style.display = "none";
     document.getElementById('stop').style.display = "block";
@@ -76,6 +80,7 @@ function disable_buttons(){
 }
 
 function enable_buttons(){
+    buttons_disabled = false;
     document.querySelectorAll("button").forEach(b => b.disabled = false);
     document.getElementById('stop').style.display = "none";
     document.getElementById('new_array').style.display = "block";
