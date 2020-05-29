@@ -1,3 +1,6 @@
+const primary_color = "#f7cac9"; 
+const secondary_color = "#034f84";
+
 function animate(type){ // 1: mergesort, 2: quicksort
     let i = 0;
     let interval = setInterval(function(){
@@ -10,7 +13,7 @@ function animate(type){ // 1: mergesort, 2: quicksort
             clearInterval(interval);
             setTimeout(function(){
                 for(let k = 0; k < bars_amount; k++){
-                    bars[k].style.backgroundColor = "purple";
+                    bars[k].style.backgroundColor = secondary_color;
                 }
                 finished_sorting = true;
                 enable_buttons();
@@ -20,11 +23,11 @@ function animate(type){ // 1: mergesort, 2: quicksort
 }
 
 function animate_swap(a, b, swap){
-    bars[a].style.backgroundColor = "purple";
-    bars[b].style.backgroundColor = "purple";
+    bars[a].style.backgroundColor = secondary_color;
+    bars[b].style.backgroundColor = secondary_color;
     setTimeout(function(){
-        bars[a].style.backgroundColor = "turquoise";
-        bars[b].style.backgroundColor = "turquoise";
+        bars[a].style.backgroundColor = primary_color;
+        bars[b].style.backgroundColor = primary_color;
     }, timeout_time);
     setTimeout(function(){
         if(swap === 1){
@@ -36,11 +39,11 @@ function animate_swap(a, b, swap){
 }
 
 function animate_overrride_bars(a, b, height){
-    bars[a].style.backgroundColor = "purple";
-    bars[b].style.backgroundColor = "purple";
+    bars[a].style.backgroundColor = secondary_color;
+    bars[b].style.backgroundColor = secondary_color;
     setTimeout(function(){
-        bars[a].style.backgroundColor = "turquoise";
-        bars[b].style.backgroundColor = "turquoise";
+        bars[a].style.backgroundColor = primary_color;
+        bars[b].style.backgroundColor = primary_color;
     }, timeout_time);
     bars[a].style.height = `${height}px`;
 }

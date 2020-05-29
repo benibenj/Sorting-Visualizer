@@ -3,7 +3,7 @@ const fs = require('fs');
 const express = require('express');
 
 const app = express();
-const PORT = process.env.PORT || 3366;
+const PORT = process.env.PORT || 3377;
 
 const FILE_INDEX = path.join(__dirname, 'html', 'index.html');
 
