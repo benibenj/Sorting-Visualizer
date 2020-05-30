@@ -2,7 +2,7 @@ let main;
 let bars;
 let bars_amount = 50;
 var timeout_time = 2;
-var finished_sorting;
+var finished_sorting = true;
 let dispatcher = [];
 let heights = [];
 let buttons_disabled = false;
@@ -18,7 +18,7 @@ window.onresize = function(){
 };
 
 function create_bars(size){
-    finished_sorting = false
+    finished_sorting = false;
     bars_amount = (size === -1) ? bars_amount:size;
     main = document.getElementById('bars-container');
     main.innerHTML = '';
@@ -80,10 +80,10 @@ function disable_buttons(){
 }
 
 function enable_buttons(){
-    buttons_disabled = false;
     document.querySelectorAll("button").forEach(b => b.disabled = false);
     document.getElementById('stop').style.display = "none";
     document.getElementById('new_array').style.display = "block";
+    buttons_disabled = false;
 }
 
 function swap_heights(i, j){

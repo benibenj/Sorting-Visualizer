@@ -184,3 +184,16 @@ input[type=range]:focus::-ms-fill-upper {
         width: 30%;
     }
 }
+
+@media (max-width: 500px) {
+    nav h2{
+        margin: 20px 0px 20px 0px;
+    }
+
+    input[type=range] {
+        width: 25%;
+    }
+    input[type=range]::-webkit-slider-runnable-track {
+        width: 25%;
+    }
+}
